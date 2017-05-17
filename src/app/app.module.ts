@@ -1,13 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {InjectionToken, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {SampleComponent} from './sample/sample.component';
-
-export const SOME_TOKEN = new InjectionToken<string>('someToken');
-export const STRING_TOKEN = 'stringToken';
+import {SOME_TOKEN, STRING_TOKEN} from './tokens';
 
 @NgModule({
   declarations: [
@@ -21,7 +19,7 @@ export const STRING_TOKEN = 'stringToken';
   ],
   providers: [
     {provide: SOME_TOKEN, useValue: 'Some Value'},
-    {provide: STRING_TOKEN, useValue: 'String token value'}
+    {provide: STRING_TOKEN, useValue: 'String token value 2'}
   ],
   bootstrap: [AppComponent]
 })
